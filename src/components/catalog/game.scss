@@ -1,0 +1,9 @@
+.cart {
+  background: rgb(55,59,74);
+  border-radius: 10%;
+  transition: 1s;
+  cursor: pointer;
+  &:hover {
+    transform: scale(1.1);
+  }
+}
