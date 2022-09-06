@@ -1,0 +1,14 @@
+.basket_cart {
+  border-radius: 15%;
+  background: rgb(55,59,74);
+  width: 400px;
+  height: 100%;
+  transition: 1s;
+  cursor: pointer;
+  &:hover {
+    transform: scale(1.1);
+  }
+}
+.description_text {
+  color: rgb(255,193,7);
+}

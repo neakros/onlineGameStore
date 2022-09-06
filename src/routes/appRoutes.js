@@ -7,6 +7,7 @@ import AdminPanel from "../components/AdminPanel/AdminPanel";
 import NotFoundPage from "../components/notFoundPage/NotFoundPage";
 import Auth from "../auth/Auth";
 import RequireAuth from "../auth/requireAuth";
+import GamePage from "../components/gamePage/GamePage";
 
 const AppRoutes = () => {
     return (
@@ -24,6 +25,7 @@ const AppRoutes = () => {
                       </RequireAuth>} />
                   <Route path='*' element={<NotFoundPage/>} />
                   <Route path='login' element={<Auth/> }/>
+                  <Route path='game-page/:gameTitle' element={<GamePage/>}/>
               </Route>
            </Routes>
         </>

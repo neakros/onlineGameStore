@@ -1,14 +1,9 @@
 import React from 'react';
 
 const GameImg = ({image, game}) => {
-    // console.log(image)
     return (
-
-        <div>
-            {/*className='img-fluid' style={{backgroundImage: `url(${image})`}}*/}
-
-            {/*{console.log(image)}*/}
-            <img className='mb-5'  src={`${image}`} alt={`${game}`} />
+        <div className='card_image mb-4'>
+            <img src={`${image}`} alt={`${game}`}style={{borderRadius:25}} />
         </div>
     );
 };

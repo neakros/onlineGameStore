@@ -1,23 +1,25 @@
 import React from 'react';
 import {useDispatch, useSelector} from "react-redux";
-import {ADDTOBASKET} from "../../reduxStore/ActionConst";
+import {ADDTOBASKET, REMOVEFROMBASKET} from "../../reduxStore/ActionConst";
 
 const PriceButton = ({game}) => {
 
     const dispatch = useDispatch()
-    const state = useSelector(state => state.basketStore)
+    const gameInBasket = useSelector(state => state.basket)
+    const removeFromBasket = gameInBasket.some(gameInBasket => gameInBasket.id === game.id)
 
     function addBasketHandler(e) {
-        e.stopPropagation();
-        dispatch({type:ADDTOBASKET, payload:game})
+        e.preventDefault();
+        if (removeFromBasket) {
+            dispatch({type:REMOVEFROMBASKET, payload:game.id})
+        }
+        else dispatch({type:ADDTOBASKET, payload:game})
     }
-
     return (
 
-        <button onClick={(e) =>addBasketHandler(e)} type='button'
+        <button onClick={(e) => addBasketHandler(e)} type='button'
                 className='btn btn-outline-warning rounded-pill p-2'>
-            Add to basket
-            {/*{console.log(state)}*/}
+            {removeFromBasket ? 'Remove from basket' : 'Add to basket'}
         </button>
     );
 };
