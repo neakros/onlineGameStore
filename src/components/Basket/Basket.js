@@ -22,7 +22,7 @@ const Basket = () => {
                 </>
                 :
                 <div>
-                    Basket is empty
+                    <span>Basket is empty</span>
                 </div>}
         </div>
     );

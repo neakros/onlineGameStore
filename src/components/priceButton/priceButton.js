@@ -9,7 +9,8 @@ const PriceButton = ({game}) => {
     const removeFromBasket = gameInBasket.some(gameInBasket => gameInBasket.id === game.id)
 
     function addBasketHandler(e) {
-        e.preventDefault();
+        e.stopPropagation();
+        e.preventDefault()
         if (removeFromBasket) {
             dispatch({type:REMOVEFROMBASKET, payload:game.id})
         }
@@ -18,8 +19,11 @@ const PriceButton = ({game}) => {
     return (
 
         <button onClick={(e) => addBasketHandler(e)} type='button'
-                className='btn btn-outline-warning rounded-pill p-2'>
-            {removeFromBasket ? 'Remove from basket' : 'Add to basket'}
+                className={`${!removeFromBasket ? 
+                    'btn btn-outline-warning rounded-pill p-2' 
+                    :
+                    'btn btn-outline-danger rounded-pill p-2' }`}>
+            {removeFromBasket ? 'Забрати з корзини' : 'Додати в корзину'}
         </button>
     );
 };

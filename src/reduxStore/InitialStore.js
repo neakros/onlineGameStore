@@ -1,8 +1,7 @@
 const initialStore = {
     auth: false,
-    // name: 'cart',
     basket: [],
-    currentGame: [],
+    gamePage: [],
 }
 
 export default initialStore;

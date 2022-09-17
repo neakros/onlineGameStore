@@ -13,4 +13,3 @@ const basketReducer = (basket = initialStore.basket, action) => {
 }
 
 export default basketReducer
-
