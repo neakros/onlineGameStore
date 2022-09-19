@@ -1,7 +1,7 @@
 import React from 'react';
 import GameImg from "./gameImg";
 import "./game.scss"
-import PriceButton from "../priceButton/priceButton";
+import PriceButton from "../PriceButton/priceButton";
 import {useDispatch} from "react-redux";
 import {INFOCART} from "../../reduxStore/ActionConst";
 import {Link} from "react-router-dom";

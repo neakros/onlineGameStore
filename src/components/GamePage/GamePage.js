@@ -1,7 +1,7 @@
 import React from 'react';
 import {useSelector} from "react-redux";
 import './currentGame.scss'
-import PriceButton from "../priceButton/priceButton";
+import PriceButton from "../PriceButton/priceButton";
 
 const GamePage = () => {
     const game = useSelector(state => state.gamePage)

@@ -1,0 +1,37 @@
+.form {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin-top: 50px;
+  transition: .4s;
+  input {
+    width: 300px;
+    height: 35px;
+    border-radius: 5px;
+  }
+  .submit {
+    background: none;
+    border: 1px solid rgb(255,193,7);
+    border-radius: 5px;
+    color: rgb(255,193,7);
+  }
+  .submit:hover {
+    background: rgb(255,193,7);
+    color: black;
+    transition: .4s;
+  }
+}
+
+.errors {
+  margin-top: 5px;
+  color: red;
+  height: 40px;
+  width: 300px;
+  p {
+    display: flex;
+    align-items: center;
+    text-align: center;
+    gap: 10px;
+  }
+}

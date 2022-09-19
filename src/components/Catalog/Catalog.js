@@ -14,7 +14,7 @@ const Catalog = () => {
                     className={`${!isDescSort ? 'btn btn-outline-warning' 
                         : 
                         'btn btn-outline-danger'}`}>Сортувати по ціні</button>
-            <Dropdown key={GAMES.id} />
+            <Dropdown/>
         </div>
             <div className='row mt-2 row-cols-sm-1 row-cols-md-2 row-cols-xl-3'
                  key={sortedGames.id}>
