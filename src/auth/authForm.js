@@ -29,17 +29,17 @@ const AuthForm = () => {
             <form onSubmit={handleSubmit(onSubmit)} className='form'>
                 <input
                     type='email'
-                    placeholder='Ведіть Email'
+                    placeholder='Введіть Email'
                     {...register('email', {required: true})}/>
 
                 <div
                     className='errors'>
-                    {errors?.email && <p><ImWarning/>Ведіть Email!</p>}
+                    {errors?.email && <p><ImWarning/>Введіть Email!</p>}
                 </div>
 
                 <input
                     type='password'
-                    placeholder='Ведіть пароль'
+                    placeholder='Введіть пароль'
                     {...register('password', {required: 'Введіть пароль',
                         minLength: {
                         value: 6,
@@ -62,6 +62,7 @@ const AuthForm = () => {
                     <input
                     className='submit'
                     type='submit'
+                    value='Login'
                     onClick={()=> isValid ? dispatch({type:LOGIN}) : false}/>}
             </form>
         </>
